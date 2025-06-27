@@ -7,5 +7,6 @@ router.get("/",getRecommendedUsers);
 router.get("/friends",getMyFriends);
 router.post("/friend-request/:id",sendFriendRequest);
 router.post("/friend-request/:id/accept",acceptFriendRequest);
-
+router.get("/friend-requests",getMyFriendRequests); 
+router.get("/outgoing-friend-requests",getOutgoingFriendReqs);
 export default router;
