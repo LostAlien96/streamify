@@ -162,13 +162,13 @@ export async function login(req, res) {
     // Find user by email
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(401).json({ message: "Invalid email or password" });
+      return res.status(401).json({ message: "Invalid email " });
     }
 
     // Check password
     const isPasswordCorrect = await user.matchPassword(password);
     if (!isPasswordCorrect) {
-      return res.status(401).json({ message: "Invalid email or password" });
+      return res.status(401).json({ message: "Invalid password" });
     }
 
     // Generate JWT token

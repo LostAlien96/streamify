@@ -7,7 +7,7 @@ const userSchema=new mongoose.Schema({
     },
     email:{
         type:String,
-        requried:true,
+        required:true,
         unique:true,
     },
     password:{
@@ -48,7 +48,7 @@ const userSchema=new mongoose.Schema({
 },{timestamps:true});//timestamps will give you createdAt and updatedAt fields
 
 userSchema.pre("save",async function(next){
-  if(!this.isModified("Password"))return next();
+  if(!this.isModified("password"))return next();
   try{
     const salt=await bcrypt.genSalt(10);
     this.password=await bcrypt.hash(this.password,salt);
