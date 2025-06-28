@@ -120,5 +120,3 @@ export async function getOutgoingFriendReqs(req, res) {
     res.status(500).json({ message: "Internal Server Error" });
   }
 }
-
-//lets say 27th june ans also something new
