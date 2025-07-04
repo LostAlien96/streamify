@@ -9,7 +9,7 @@ import OnboardingPage from "./pages/OnboardingPage.jsx";
 import { Toaster } from "react-hot-toast";
 function App() {
   return (
-    <div className=" " data-theme="night">
+    <div className="h-screen" data-theme="night">
  
       <Routes>
         <Route path="/" element={<HomePage/>} />
